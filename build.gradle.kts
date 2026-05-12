@@ -31,6 +31,8 @@ dependencies {
 	implementation ("org.springframework.boot:spring-boot-starter-actuator")
 	// used for validation annotations
 	implementation("org.springframework.boot:spring-boot-starter-validation")
+	// used for spring JPA persistence
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 }
 
 tasks.withType<Test> {

@@ -1,4 +1,4 @@
-package com.noutch.warframe_crafting_api;
+package com.noutch.warframe_crafting_api.model;
 
 import java.util.List;
 import java.util.Optional;
