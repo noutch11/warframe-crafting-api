@@ -8,7 +8,7 @@ public class BlueprintNotFoundException extends RuntimeException {
 
     // a constructor to include the blueprint id for more detailed error logging
     public BlueprintNotFoundException(Long id) {
-        super("Blueprint # " + id + " was not found in the database");
+        super("Blueprint #" + id + " was not found in the database");
     }
 
 }

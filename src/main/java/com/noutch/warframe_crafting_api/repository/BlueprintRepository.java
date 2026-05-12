@@ -3,11 +3,12 @@ package com.noutch.warframe_crafting_api.repository;
 import java.util.Optional;
 
 import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.noutch.warframe_crafting_api.model.Blueprint;
+import com.noutch.warframe_crafting_api.model.BlueprintType;
+
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Page;
-
-import com.noutch.warframe_crafting_api.Blueprint;
-import com.noutch.warframe_crafting_api.BlueprintType;
 
 public interface BlueprintRepository extends JpaRepository<Blueprint, Long> {
     // custom query methods to filter blueprints by required mastery rank and build time

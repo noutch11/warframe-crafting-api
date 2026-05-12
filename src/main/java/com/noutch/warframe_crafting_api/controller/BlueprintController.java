@@ -2,9 +2,9 @@ package com.noutch.warframe_crafting_api.controller;
 
 import java.util.Optional;
 
-import com.noutch.warframe_crafting_api.Blueprint;
-import com.noutch.warframe_crafting_api.BlueprintType;
 import com.noutch.warframe_crafting_api.exception.BlueprintNotFoundException;
+import com.noutch.warframe_crafting_api.model.Blueprint;
+import com.noutch.warframe_crafting_api.model.BlueprintType;
 import com.noutch.warframe_crafting_api.repository.BlueprintRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,10 +16,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import jakarta.validation.Valid;
-
-
-
-
 
 @RestController
 // common url prefix for all endpoints in the blueprint controller
@@ -49,7 +45,6 @@ public class BlueprintController {
         return ResponseEntity.ok().body(blueprintRepo.findAll(pageable));
     }
     
-
     @PostMapping
     // add a new blueprint to the database, validating the request body before saving it
     public ResponseEntity<Blueprint> addBlueprint(@Valid @RequestBody Blueprint blueprint) {
@@ -128,7 +123,6 @@ public class BlueprintController {
         // return a 200 status stating that the blueprint is successfully deleted
         return ResponseEntity.ok().body("The blueprint was successfully deleted."); 
     }
-
 
     // controller-level exception handling since we only have one controller
     @ExceptionHandler(IllegalArgumentException.class)
